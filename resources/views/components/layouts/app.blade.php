@@ -13,6 +13,19 @@
     {{-- {{ $slot }} --}}
 
     @auth
+        <div class="drawer lg:drawer-open">
+            <input id="drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <!-- Page content here -->
+                @livewire('partial.navbar') {{-- include navbar --}}
+                {{-- <label for="drawer" class="btn btn-primary drawer-button">Open drawer</label> --}}
+                {{ $slot }}
+            </div>
+            <div class="drawer-side">
+                <label for="drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                @livewire('partial.sidebar') {{-- include sidebar --}}
+            </div>
+        </div>
 
     @endauth
 
