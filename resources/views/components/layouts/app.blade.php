@@ -9,8 +9,19 @@
     @vite('resources/css/app.css') {{-- sambungkan css --}}
 </head>
 
-<body>
-    {{ $slot }}
+<body class="bg-base-200 min-h-screen">
+    {{-- {{ $slot }} --}}
+
+    @auth
+
+    @endauth
+
+    @guest
+        <div class="flex flex-col justify-center items-center h-screen gap-8">
+            <h1 class="font-bold text-4xl">{{ config('app.name') }}</h1>
+            {{ $slot }}
+        </div>
+    @endguest
 </body>
 
 </html>
