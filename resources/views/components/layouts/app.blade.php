@@ -26,10 +26,10 @@
                 @livewire('partial.sidebar') {{-- include sidebar --}}
             </div>
         </div>
-
     @endauth
 
     @guest
+        {{-- kenapa di bagian sini dia otomatis, masuk ke login.blade, karena di middleware sudah di konfgurasi, ada middlwerea auth dan guest --}}
         <div class="flex flex-col justify-center items-center h-screen gap-8">
             <h1 class="font-bold text-4xl">{{ config('app.name') }}</h1>
             {{ $slot }}

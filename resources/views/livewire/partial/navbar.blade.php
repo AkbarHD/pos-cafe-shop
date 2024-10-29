@@ -14,9 +14,9 @@
             </ul>
         </div> --}}
 
-        <a class="drawer btn btn-ghost btn-circle">
+        <label class="drawer max-w-7 btn btn-ghost btn-circle">
             <x-tabler-menu class="size-5" />
-        </a>
+        </label>
     </div>
     <div class="navbar-center">
         <a href="{{ route('home') }}" class="btn btn-ghost text-xl" wire:navigate>{{ config('app.name') }}</a>

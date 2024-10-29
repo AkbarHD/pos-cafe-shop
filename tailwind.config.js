@@ -13,6 +13,7 @@ export default {
         require("tailwind-scrollbar-hide"),
     ],
     daisyui: {
+        // punya daisyui
         themes: ["bumblebee"],
     }
 }

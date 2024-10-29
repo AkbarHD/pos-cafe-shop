@@ -19,6 +19,7 @@ class Login extends Component
             $this->redirect(route('home'), true);
         }
     }
+    // render ini sudah otomatis di buatkan, ketika kita bikin pa make:livewire Login
     public function render()
     {
         return view('livewire.auth.login');

@@ -1,6 +1,6 @@
 <div class="page-wrapper">
     <div class="card max-w-lg mx-auto">
-        <form class="card-body" wire:submit.prevent="simpan">
+        <form class="card-body" wire:submit="simpan">
             <h3 class="card-title">Edit Profile</h3>
 
             <div class="py-4 space-y-2">

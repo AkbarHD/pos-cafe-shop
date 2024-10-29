@@ -18,17 +18,17 @@ class Profile extends Component
         $valid = $this->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'sometimes'
+            'password' => 'nullable'
         ]);
 
-        if (!isset($this->password)) {
+        if (!isset($this->password)) { // jika passwordnya tidak diisi maka : validasi password tdk di jalankan
             unset($valid['password']);
         }
 
         $this->user->update($valid);
         // jika berhasil reset dan arahkan ke mount
-        $this->reset();
-        $this->mount();
+        $this->reset('password');
+        // $this->mount();
 
     }
     public function mount()
