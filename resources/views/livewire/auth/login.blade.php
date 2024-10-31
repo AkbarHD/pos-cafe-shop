@@ -7,7 +7,7 @@
                     'input-error' => $errors->first('email'),
                 ])>
                     <x-tabler-at class="size-5" />
-                    <input type="text" class="grow" placeholder="Email" wire:model="email" />
+                    <input type="text" class="grow" placeholder="Email" autocomplete="off" wire:model="email" />
                 </label>
                 @error('email')
                     <span class="error text-red-600 text-sm">{{ $message }}</span>
@@ -19,7 +19,8 @@
                     'input-error' => $errors->first('password'),
                 ])>
                     <x-tabler-key class="size-5" />
-                    <input type="password" class="grow" placeholder="password" wire:model="password" />
+                    <input type="password" class="grow" placeholder="password" autocomplete="off"
+                        wire:model="password" />
                 </label>
                 @error('password')
                     <span class="error text-red-600 text-sm">{{ $message }}</span>

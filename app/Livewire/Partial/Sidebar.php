@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class Sidebar extends Component
 {
+    // kenapa method logout di dalam Sidebar.php kareana. tombol logout berada pada sidebar
     public function logout()
     {
         auth()->logout();
